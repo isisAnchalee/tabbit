@@ -1,6 +1,4 @@
-//var a = chrome.tabs.query()
-
-
+// Instantiate our data objects
 var oneWindowCollection = {},
   windowEvents = {
     urlDict: {}
@@ -20,7 +18,6 @@ var oneWindowCollection = {},
 
 // Process through the window object
   windowEvents.process = function (windowObj) {
-    debugger;
     for (tab in windowObj) {
       var tabObj = windowObj[tab];
       if (windowEvents.validateUrl(tabObj)) {
@@ -28,7 +25,6 @@ var oneWindowCollection = {},
       }
     }
   };
-
 
 
 // Get all Tabs from a window
@@ -53,17 +49,9 @@ var allWindows = function () {
   return results;
 };
 
-// var processedTabs = function () {
-//   windowEvents.process
-// };
-
- // console.log(windowEvents, windowCollection);
-
-console.log(oneWindowTabs());
-console.log(allWindows());
-
-
-
+function collectTabs () {
+  windowEvents.process(oneWindowTabs);
+};
 
 
 // returns an array of Elements by Class Name
@@ -80,9 +68,9 @@ function getElById(id){
 // Get elemeents by selector
 function getBySelector(selector, type){
   if (type == "class"){
-    getClassEl(selector)
+    getElsByClass(selector)
   } else if (type == "id"){
-    getIdEl(selector)
+    getElById(selector)
   } else {
     throw "error";
   }
