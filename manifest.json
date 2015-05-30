@@ -1,0 +1,16 @@
+{
+  "manifest_version": 2,
+
+  "name": "tabbit",
+  "description": "This extension will help you organize all of the internet that's fit for tabs",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "tabs",
+    "bookmarks"
+  ]
+}
