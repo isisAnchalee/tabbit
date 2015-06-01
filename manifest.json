@@ -1,11 +1,11 @@
 {
   "manifest_version": 2,
-
   "name": "tabbit",
   "description": "This extension will help you organize all of the internet that's fit for tabs",
   "version": "1.0",
   "background": {
-    "scripts": ["background.js"]
+    "scripts": ["background.js"],
+    "persistent": true
     },
   "browser_action": {
     "default_icon": "icon.png",
@@ -13,6 +13,7 @@
   },
   "permissions": [
     "tabs",
-    "bookmarks"
+    "bookmarks",
+    "background"
   ]
 }
