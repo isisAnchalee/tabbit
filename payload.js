@@ -19,7 +19,8 @@ function createList(tabObj){
 createList(bg.windowCollection);
 
 
-
+// These functions need to be cleaned up to re-collect the window collection
+// on restore
 document.addEventListener('DOMContentLoaded', function () {
 
   document.getElementById('restore').addEventListener('click', function () {
